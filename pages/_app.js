@@ -1,19 +1,19 @@
-import "../css/index.css";
-import Head from "next/head";
-import Layout from "@components/layout";
+import '../css/index.css';
+import Head from 'next/head';
+import Layout from '@components/layout';
+import {QueryClient, QueryClientProvider, useQuery} from 'react-query';
+const queryClient = new QueryClient();
 
-function MyApp({ Component, pageProps }) {
+function MyApp({Component, pageProps}) {
   return (
     <Layout>
       <Head>
-        <title>Next.js Starter Tailwind</title>
-        <meta
-          name="Description"
-          content="A Next.js starter styled using Tailwind CSS."
-        />
+        <title>TAP Waiver</title>
+        <meta name="Description" content="student waiver" />
       </Head>
-
-      <Component {...pageProps} />
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+      </QueryClientProvider>
     </Layout>
   );
 }

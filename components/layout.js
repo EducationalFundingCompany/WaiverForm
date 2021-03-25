@@ -1,12 +1,12 @@
-import Header from "./header";
-import Footer from "./footer";
+import Header from './header';
+import Footer from './footer';
 
 export default function Layout(props) {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-blue-450">
       <Header />
 
-      <main className="flex-1 lg:container px-4 py-6 mx-auto md:px-6 md:py-12">
+      <main className="flex-1 lg:container px-4 mx-auto md:px-6">
         {props.children}
       </main>
 
